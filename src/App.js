@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import DatePicker from './components/Calendar-unfinished/DatePicker'
+import PeopleSelect from './components/peopleRadioButton/PeopleSelect'
+import StepCard from './components/stepCards/StepCard'
+import { step1, step2, step3, step4 } from './stepData'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+
+
+
+    return (
+        <div className="container">
+            <div className="row">
+                <StepCard step={step1}/>
+                {/* <StepCard step={step2}/>
+                <StepCard step={step3}/>
+                <StepCard step={step4}/> */}
+            </div>
+            <div className="row mt-5 mb-5">
+                <DatePicker/>
+            </div>
+            <div>
+                <PeopleSelect/>
+            </div>
+            
+        </div>
+
+    )
 }
 
-export default App;
+export default App
