@@ -5,7 +5,7 @@ import PeopleRadioButton from './PeopleRadioButton'
 const PeopleSelect = () => {
 
     const [selected, setSelected] = useState("2");
-
+    console.log(selected, '人');
     return (
         <div className="">
             <PeopleRadioButton

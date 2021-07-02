@@ -17,7 +17,7 @@ const PeopleRadioButton = (props) => {
                 <div className="helper-text">{text}</div>
                 <div className="astronaut-icon-wrapper">
                     {/* lacking a unique key prop */}
-                { Array(visuals).fill(<img src={astronaut} alt="icons" />) }
+                { Array.from({length:visuals}, (_ , i)=> (<img key={i} src={astronaut} alt="icons" />))}
                 </div>
                 <div style={{marginTop: 'auto', marginBottom: 'auto'}}>
                     <div
