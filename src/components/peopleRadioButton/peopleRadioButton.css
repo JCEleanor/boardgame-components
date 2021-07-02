@@ -1,3 +1,7 @@
+/* area width: 595px, height: 269px */
+/* astrounaut icon: w: 36px, h: 33px */
+/* radio btn 24 24 */
+/* spaceship icon  54 34*/
 :root {
 	--root-font-size: 16px;
 	--muted-purple: #9c64a5;
@@ -46,6 +50,10 @@
 .unselected {
 	border: 2px solid var(--gray);
 }
+.modern-radio-container:hover .unselected {
+	border: 2px solid var(--light-purple);
+}
+
 .unselected-circle {
 	width: 0;
 	height: 0;
