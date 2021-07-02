@@ -5,8 +5,7 @@ import spaceship from '../../images/spaceship.png'
 
 const PeopleRadioButton = (props) => {
     
-    const { selected, onChange, text, visuals ,value } = props
-    // find a way to repeat img tags
+    const { selected, onChange, text, iconLength ,value } = props
 
     return (
         <div className="people-select-container">
@@ -19,7 +18,7 @@ const PeopleRadioButton = (props) => {
                 <div className="helper-text"><span>{text}</span></div>
                 <div className="astronaut-icon-wrapper">
                     {/* lacking a unique key prop */}
-                { Array.from({length:visuals}, (_ , i)=> (<img key={i} src={astronaut} alt="icons" />))}
+                { Array.from({length:iconLength}, (_ , i)=> (<img key={i} src={astronaut} alt="icons" />))}
                 </div>
                 <div style={{marginTop: 'auto', marginBottom: 'auto'}}>
                     <div
