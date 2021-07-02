@@ -7,7 +7,8 @@ const PeopleSelect = () => {
     const [selected, setSelected] = useState("2");
     console.log(selected, '人');
     return (
-        <div className="">
+        // adjudt height later
+        <div>
             <PeopleRadioButton
                 value="2"
                 selected={selected}

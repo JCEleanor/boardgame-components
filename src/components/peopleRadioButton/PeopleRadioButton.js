@@ -1,7 +1,7 @@
 import React from 'react'
 import './peopleRadioButton.css'
 import astronaut from '../../images/astronaut.svg'
-import spaceship from '../../images/spaceship.png'
+import flat from '../../images/flat.svg'
 
 const PeopleRadioButton = (props) => {
     
@@ -14,7 +14,7 @@ const PeopleRadioButton = (props) => {
             onClick={() => {
               onChange(value);
                 }}>
-                <div className="spaceship-icon-wrapper"><img src={ spaceship} alt="spaceship icon"/></div>
+                <div className="spaceship-icon-wrapper"><img src={flat} alt="spaceship icon"/></div>
                 <div className="helper-text"><span>{text}</span></div>
                 <div className="astronaut-icon-wrapper">
                     {/* lacking a unique key prop */}
