@@ -1,6 +1,7 @@
 import React from 'react'
 import DatePicker from './components/Calendar-unfinished/DatePicker'
 import PeopleSelect from './components/peopleRadioButton/PeopleSelect'
+import StoreInfo from './components/storeInfo/StoreInfo'
 import StepCard from './components/stepCards/StepCard'
 import { step1, step2, step3, step4 } from './stepData'
 
@@ -22,6 +23,9 @@ const App = () => {
             </div>
             <div>
                 <PeopleSelect/>
+            </div>
+            <div>
+                <StoreInfo />
             </div>
             
         </div>
