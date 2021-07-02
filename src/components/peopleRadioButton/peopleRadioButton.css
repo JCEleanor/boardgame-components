@@ -14,9 +14,9 @@
 
 .people-select-container {
 	display: block;
-	width: 500px;
+	width: 595px;
 	/* 寬度待查 */
-	max-width: 500px;
+	max-width: 595px;
 }
 
 .modern-radio-container {
@@ -24,6 +24,17 @@
 	display: flex;
 	cursor: pointer;
 	user-select: none;
+}
+
+.spaceship-icon-wrapper {
+	width: 54px;
+	height: 34px;
+	margin-right: 15px;
+}
+.spaceship-icon-wrapper img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .radio-outer-circle {
@@ -58,10 +69,19 @@
 	width: 0;
 	height: 0;
 }
+
 .helper-text {
 	color: var(--white);
-	padding-right: 8px;
-	margin-right: 10px;
+	margin-right: 15px;
+	margin-left: 5px;
+	display: flex;
+}
+
+.helper-text span {
+	text-align: center;
+	justify-content: center;
+	display: inline-block;
+	margin: auto;
 }
 
 .astronaut-icon-wrapper {
