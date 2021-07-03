@@ -7,11 +7,11 @@ const Store = (props) => {
 
     // availibility: {13: true, 14: true, 15: true, 16: true, ...},
     const { storeId, storeName, storeImg, address, tel, availibility } = props.store
-    const { onLocationAndTimeChange } = props
-    const buttons = []
+    const { onLocationAndTimeChange, locationAndTime } = props
     
+    const buttons = []
     for (const [key, isAvailible] of Object.entries(availibility)) {
-        buttons.push(<TimeButton key={key} value={{ storeId, time: key }} isAvailible={isAvailible} onSelectChange={onLocationAndTimeChange}/>)}
+        buttons.push(<TimeButton key={key} value={{ storeId, time: key }} isAvailible={isAvailible} onLocationAndTimeChange={onLocationAndTimeChange} locationAndTime={locationAndTime}/>)}
     
     
     return (
