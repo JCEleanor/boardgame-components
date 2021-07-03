@@ -14,7 +14,9 @@ const TimeButton = (props) => {
     }
 
     return (
-        <button className={`time-button ${isAvailible && " availible "}${isSelected && "selected"}`}
+        <button
+            className={`time-button ${isAvailible && " availible "}${isSelected && "selected"}`}
+            disabled={!isAvailible}
             onClick={()=>{onLocationAndTimeChange(value)}}>
             <span className="time-icon"><AiOutlineClockCircle/></span>
             <span className="time-info">{value.time}:00</span>
