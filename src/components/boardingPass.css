@@ -11,13 +11,14 @@
 }
 
 .boarding-pass-wrapper {
-	/* 這邊用% */
+	/* 這是要怎麼RWD啊傻眼== */
 	width: 1195px;
 	height: 650px;
 	position: relative;
 }
 
 .bording-pass {
+	object-fit: cover;
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -66,7 +67,10 @@
 }
 
 .booking-sub-info-row {
-	margin-bottom: 45px;
+	margin-bottom: 40px;
+	padding: 0 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid var(--white);
 }
 
 .booking-sub-info-title {
