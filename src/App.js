@@ -14,9 +14,9 @@ const App = () => {
         <div className="container">
             <div className="row">
                 <StepCard step={step1}/>
-                {/* <StepCard step={step2}/>
+                <StepCard step={step2}/>
                 <StepCard step={step3}/>
-                <StepCard step={step4}/> */}
+                <StepCard step={step4}/>
             </div>
             <div className="row mt-5 mb-5">
                 <DatePicker/>

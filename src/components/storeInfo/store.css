@@ -35,3 +35,7 @@ mobile: w: 55px h: 25px */
 	height: 100%;
 	object-fit: cover;
 }
+
+.time-button-group {
+	width: 500px;
+}
