@@ -4,12 +4,13 @@ import Store from './Store'
 
 const StoreInfo = () => {
     const [locationAndTime, setLocationAndTime] = useState({ storeId: null, time: null })
-    // console.log(locationAndTime);
+    console.log(locationAndTime);
 
     return (
+        // to do: a filter button to either show all stores or show only one based on user input
         <>
-            <Store store={store1} onChange={setLocationAndTime} />
-            <Store store={store2} onChange={setLocationAndTime} />
+            <Store store={store1} onLocationAndTimeChange={setLocationAndTime} />
+            <Store store={store2} onLocationAndTimeChange={setLocationAndTime} />
         </>
     )
 }

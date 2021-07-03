@@ -1,19 +1,17 @@
-import React, {useState} from 'react'
+import React from 'react'
 import TimeButton from './TimeButton'
 import './store.css'
 
 
 const Store = (props) => {
-    const [selected, setSelected] = useState({ storeId: null, time: null })
-    console.log(selected);
 
     // availibility: {13: true, 14: true, 15: true, 16: true, ...},
-    const { storeId, storeName, storeImg, address, tel, availibility, onChange} = props.store
-
+    const { storeId, storeName, storeImg, address, tel, availibility } = props.store
+    const { onLocationAndTimeChange } = props
     const buttons = []
-
+    
     for (const [key, isAvailible] of Object.entries(availibility)) {
-        buttons.push(<TimeButton key={key} value={{ storeId, time: key }} isAvailible={isAvailible} onSelectchange={setSelected}/>)}
+        buttons.push(<TimeButton key={key} value={{ storeId, time: key }} isAvailible={isAvailible} onSelectChange={onLocationAndTimeChange}/>)}
     
     
     return (
