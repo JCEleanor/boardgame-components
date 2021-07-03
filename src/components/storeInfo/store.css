@@ -17,7 +17,7 @@ mobile: w: 55px h: 25px */
 }
 
 .store-info-container {
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 	display: flex;
 	width: 1000px;
 	color: var(--white);
@@ -36,6 +36,30 @@ mobile: w: 55px h: 25px */
 	object-fit: cover;
 }
 
+.store-info-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 .time-button-group {
 	width: 500px;
+}
+
+.store-name {
+	font-size: 2rem;
+}
+
+.store-address span,
+.store-tel span {
+	margin-right: 5px;
+}
+
+.store-address,
+.store-tel {
+	font-size: 1rem;
+}
+
+.store-tel {
+	margin-top: -10px;
 }
