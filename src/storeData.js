@@ -1,4 +1,5 @@
 export const store1 = {
+    // 其實可以直接存店名 等等改一下好了
     storeId: '1',
     storeImg: 'https://fakeimg.pl/300/',
     storeName: '大安店',
