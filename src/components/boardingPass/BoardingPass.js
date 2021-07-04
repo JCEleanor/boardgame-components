@@ -5,12 +5,12 @@ import BoardingPassMobile from './BoardingPassMobile'
 
 const BoardingPass = () => {
 
-    const [width, setWidth] = useState(0);
+    const [width, setWidth] = useState(window.innerWidth);
 
     useEffect(() => {
       const updateWindowDimensions = () => {
-        const newWidth = window.innerWidth;
-        setWidth(newWidth);
+          setWidth(window.innerWidth);
+          //console.log('updating width');
       };
   
       window.addEventListener("resize", updateWindowDimensions);
@@ -19,14 +19,12 @@ const BoardingPass = () => {
   
     }, []);
 
-    console.log('current width: ', width);
+    //console.log('current width: ', width);
   
-    if (width > 1195) {
-        return (<BoardingPassPc/>)
-    } else {
-        return (<BoardingPassMobile/>)
-    }
-    
+    return (
+        width > 1195 ? <BoardingPassPc /> : <BoardingPassMobile/>
+    )
 }
+    
 
 export default BoardingPass
