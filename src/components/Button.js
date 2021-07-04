@@ -1,4 +1,5 @@
 //this button is supposed to be common button, just temporary
+// border-radius 4px
 import React from 'react'
 
 const Button = (props) => {

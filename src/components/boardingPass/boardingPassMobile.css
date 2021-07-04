@@ -6,6 +6,32 @@
 	position: relative;
 	/* todo: fix font size */
 }
-
 .booking-info-wrapper-m {
+	position: absolute;
+	left: 15px;
+	bottom: 25px;
+
+	display: flex;
+	flex-direction: column;
+	height: 150px;
+	flex-wrap: wrap;
+}
+.booking-main-info-row-m {
+	display: flex;
+	padding-bottom: 5px;
+	margin-bottom: 6px;
+	margin-right: 10px;
+	width: 145px;
+	border-bottom: 1px solid var(--light-purple);
+}
+
+.booking-info-title-m {
+	width: 60px;
+	text-align: center;
+	margin-right: 15px;
+}
+
+.booking-info-content-m {
+	width: 65px;
+	text-align: center;
 }
