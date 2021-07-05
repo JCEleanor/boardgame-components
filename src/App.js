@@ -1,5 +1,5 @@
 import React from 'react'
-import DatePicker from './components/Calendar-unfinished/DatePicker'
+import DatePicker from './components/calendar/DatePicker'
 import PeopleSelect from './components/peopleRadioButton/PeopleSelect'
 import StoreInfo from './components/storeInfo/StoreInfo'
 import BoardingPass from './components/boardingPass/BoardingPass'

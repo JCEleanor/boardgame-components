@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import Calendar from 'react-calendar';
-// import 'react-calendar/dist/Calendar.css';
 import './datePicker.css'
 
 
@@ -9,9 +8,6 @@ function DatePicker() {
   const [date, setDate] = useState(today);
   console.log(date);
   
-
-  // 滑鼠離開後就會失焦 沒辦法選擇
-
     return (
       <Calendar
         onChange={setDate}
@@ -21,7 +17,6 @@ function DatePicker() {
         minDate={today}
         next2Label={null}
         prev2Label={null}
-      // has-active 是現在的時間
       />
     );
 }
