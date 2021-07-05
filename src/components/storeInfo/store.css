@@ -17,6 +17,8 @@ mobile: w: 55px h: 25px */
 }
 
 .store-info-container {
+	margin-right: auto;
+	margin-left: auto;
 	margin-bottom: 50px;
 	display: flex;
 	width: 1000px;

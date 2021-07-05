@@ -14,7 +14,9 @@ const App = () => {
 			<Switch>
 				<Route path="/booking-steps" component={BookingStep} />
 				<Route path="/booking" component={BookingProcess} />
-				<Route path="/booking-confirm" component={BookingConfirm} />
+                <Route path="/booking-confirm" component={BookingConfirm} />
+                {/* success頁面待處理 */}
+				<Route path="/booking-success" component={BookingConfirm} />
             </Switch>
             {/* <Footer/> */}
 		</Router>

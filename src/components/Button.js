@@ -8,6 +8,7 @@ const Button = (props) => {
     const {link, buttonText, className} = props
     return (
         <Link to={link}>
+            {/* add a conditional statement to className */}
             <button className={className + " general-button"}>{buttonText}</button>
         </Link>
     )
