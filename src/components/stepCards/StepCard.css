@@ -28,12 +28,9 @@
 html {
 	font-size: var(--root-font-size);
 	box-sizing: border-box;
-
-	/* font-family: ; */
 }
 
 .step-card {
-	/* for presentation's sake */
 	margin: 20px;
 
 	width: var(--step-card-width);
@@ -64,10 +61,8 @@ html {
 	left: 50%;
 	transform: translateX(-50%);
 
-	background-color: var(--light-blue);
-	color: var(--white);
-	padding: 10px 20px;
-	border-radius: 10px;
+	/* 如果scss檔有設定好 就可以透過props來控制共用button的顏色 */
+	/* background-color: var(--light-blue); */
 }
 
 .button-show {

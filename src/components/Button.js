@@ -1,12 +1,15 @@
-//this button is supposed to be common button, just temporary
-// border-radius 4px
 import React from 'react'
+import { Link } from 'react-router-dom'
+import './button.css'
 
 const Button = (props) => {
-    const {hover, link, buttonText} = props
+    // 如果scss檔有設定好 就可以透過props來控制共用button的顏色
 
+    const {link, buttonText, className} = props
     return (
-        <button href={link} className={'card-button ' + (hover ? 'button-show' : '')}>{buttonText}</button>
+        <Link to={link}>
+            <button className={className + " general-button"}>{buttonText}</button>
+        </Link>
     )
 }
 

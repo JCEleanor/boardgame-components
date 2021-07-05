@@ -3,7 +3,7 @@ import './StepCard.css'
 
 const StepCard = (props) => {
 
-    //props: step (str), stepIcon(img, src), stepImage(img,src), stepHeader(str), stepDetail(str)
+    //props: step (str), stepIcon(img, src), Hover(component), stepImage(img,src), stepHeader(str), stepDetail(str)
     const { step, stepIcon, Hover, link, buttonText, stepImage, stepHeader, stepDetail } = props.step
 
     //for components' hover state
@@ -19,7 +19,8 @@ const StepCard = (props) => {
         >
             <div className="img-wrapper">
                 <img src={stepImage} alt="pricing-table" />
-                {Hover && (<Hover hover={ hover} link={link} buttonText={buttonText} />)}
+                {/* hover than show the button */}
+                {Hover && (<Hover link={link} buttonText={buttonText} className={'card-button ' + (hover ? 'button-show' : '')}/>)}
             </div>
             <div className="step-header"> <span className="step">{step}</span>
                 {stepHeader}</div>
