@@ -1,36 +1,23 @@
 import React from 'react'
-import DatePicker from './components/calendar/DatePicker'
-import PeopleSelect from './components/peopleRadioButton/PeopleSelect'
-import StoreInfo from './components/storeInfo/StoreInfo'
-import BoardingPass from './components/boardingPass/BoardingPass'
-import StepCard from './components/stepCards/StepCard'
-import { step1, step2, step3, step4 } from './stepData'
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+
+import BookingStep from './pages/BookingStep';
+import BookingProcess from './pages/BookingProcess';
+import BookingConfirm from './pages/BookingConfirm';
 
 const App = () => {
 
 
     return (
-        <div className="container">
-            <div className="row">
-                <StepCard step={step1}/>
-                <StepCard step={step2}/>
-                <StepCard step={step3}/>
-                <StepCard step={step4}/>
-            </div>
-            <div className="row mt-5 mb-5">
-                <DatePicker/>
-            </div>
-            <div>
-                <PeopleSelect/>
-            </div>
-            <div>
-                <StoreInfo />
-            </div>
-            <div>
-                <BoardingPass />
-            </div>
-            
-        </div>
+        <Router>
+            {/* <Navbar/> */}
+			<Switch>
+				<Route path="/booking-steps" component={BookingStep} />
+				<Route path="/booking" component={BookingProcess} />
+				<Route path="/booking-confirm" component={BookingConfirm} />
+            </Switch>
+            {/* <Footer/> */}
+		</Router>
 
     )
 }
