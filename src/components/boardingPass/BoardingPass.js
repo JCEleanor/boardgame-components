@@ -1,30 +1,24 @@
-import React, {useEffect, useState} from 'react'
-import BoardingPassPc from './BoardingPassPc'
-import BoardingPassMobile from './BoardingPassMobile'
-
+import React, { useEffect, useState } from "react";
+import BoardingPassPc from "./BoardingPassPc";
+import BoardingPassMobile from "./BoardingPassMobile";
 
 const BoardingPass = () => {
+  const [width, setWidth] = useState(window.innerWidth);
 
-    const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const updateWindowDimensions = () => {
+      setWidth(window.innerWidth);
+      //console.log('updating width');
+    };
 
-    useEffect(() => {
-      const updateWindowDimensions = () => {
-          setWidth(window.innerWidth);
-          //console.log('updating width');
-      };
-  
-      window.addEventListener("resize", updateWindowDimensions);
-  
-      return () => window.removeEventListener("resize", updateWindowDimensions) 
-  
-    }, []);
+    window.addEventListener("resize", updateWindowDimensions);
 
-    //console.log('current width: ', width);
-  
-    return (
-        width > 1195 ? <BoardingPassPc /> : <BoardingPassMobile/>
-    )
-}
-    
+    return () => window.removeEventListener("resize", updateWindowDimensions);
+  }, []);
 
-export default BoardingPass
+  //console.log('current width: ', width);
+
+  return width > 1195 ? <BoardingPassPc /> : <BoardingPassMobile />;
+};
+
+export default BoardingPass;
