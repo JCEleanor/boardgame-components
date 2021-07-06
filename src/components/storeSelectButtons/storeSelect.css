@@ -7,7 +7,8 @@
     font-size: 1.2rem;
     min-width: 170px;
 	color: var(--white);
-	padding: 10px 20px;
+	padding: 8px 20px;
+    margin-top: 35px;
 	border: transparent;
 
     border-radius: 5px;
@@ -18,4 +19,9 @@
 
 .store-select-button img {
     margin-right: 15px;
+}
+
+.selected {
+    -webkit-box-shadow: 0px 0px 10px 1px var(--light-purple);
+	box-shadow: 0px 0px 10px 1px var(--light-purple);
 }

@@ -1,27 +1,51 @@
-import React, { useState } from "react"
-import { store1, store2 } from "../../storeData"
-import Store from "./Store"
+import React from "react";
+import { store1, store2 } from "../../storeData";
+import Store from "./Store";
 
 const StoreInfo = (props) => {
-  const { locationAndTime, setLocationAndTime } = props
+  const { locationAndTime, setLocationAndTime, showStores } = props;
 
-  //console.log(locationAndTime)
+  switch (showStores) {
+    case "daan":
+      return (
+        <>
+          <Store
+            // 大安店
+            store={store1}
+            onLocationAndTimeChange={setLocationAndTime}
+            locationAndTime={locationAndTime}
+          />
+        </>
+      );
+    case "songshan":
+      return (
+        <>
+          <Store
+            // 松山店
+            store={store2}
+            onLocationAndTimeChange={setLocationAndTime}
+            locationAndTime={locationAndTime}
+          />
+        </>
+      );
+    default:
+      return (
+        <>
+          <Store
+            // 大安店
+            store={store1}
+            onLocationAndTimeChange={setLocationAndTime}
+            locationAndTime={locationAndTime}
+          />
+          <Store
+            // 松山店
+            store={store2}
+            onLocationAndTimeChange={setLocationAndTime}
+            locationAndTime={locationAndTime}
+          />
+        </>
+      );
+  }
+};
 
-  return (
-    // to do: a filter button to either show all stores or show only one based on user input
-    <>
-      <Store
-        store={store1}
-        onLocationAndTimeChange={setLocationAndTime}
-        locationAndTime={locationAndTime}
-      />
-      <Store
-        store={store2}
-        onLocationAndTimeChange={setLocationAndTime}
-        locationAndTime={locationAndTime}
-      />
-    </>
-  )
-}
-
-export default StoreInfo
+export default StoreInfo;
