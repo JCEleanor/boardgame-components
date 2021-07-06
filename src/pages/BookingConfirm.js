@@ -1,7 +1,7 @@
 import React from 'react'
-import "./bookingConfirm.css"
-import BoardingPass from "../components/boardingPass/BoardingPass"
-import Button from "../components/Button"
+import './bookingConfirm.css'
+import BoardingPass from '../components/boardingPass/BoardingPass'
+import Button from '../components/Button'
 
 const BookingConfirm = () => {
   return (
