@@ -1,17 +1,17 @@
-import React from "react";
-import "./peopleRadioButton.css";
-import astronaut from "../../images/astronaut.svg";
-import flat from "../../images/flat.svg";
+import React from "react"
+import "./peopleRadioButton.css"
+import astronaut from "../../images/astronaut.svg"
+import flat from "../../images/flat.svg"
 
 const PeopleRadioButton = (props) => {
-  const { selected, onChange, text, iconLength, value } = props;
+  const { selected, onChange, text, iconLength, value } = props
 
   return (
     <div className="people-select-container">
       <div
         className="modern-radio-container"
         onClick={() => {
-          onChange(value);
+          onChange(value)
         }}
       >
         <div className="spaceship-icon-wrapper">
@@ -40,7 +40,7 @@ const PeopleRadioButton = (props) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default PeopleRadioButton;
+export default PeopleRadioButton

@@ -1,8 +1,8 @@
-import React from 'react';
-import "./bookingStep.css";
-import Button from "../components/Button";
-import StepCard from "../components/stepCards/StepCard";
-import { step1, step2, step3, step4 } from "../stepData";
+import React from 'react'
+import "./bookingStep.css"
+import Button from "../components/Button"
+import StepCard from "../components/stepCards/StepCard"
+import { step1, step2, step3, step4 } from "../stepData"
 
 const BookingStep = () => {
   return (
@@ -25,7 +25,7 @@ const BookingStep = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default BookingStep;
+export default BookingStep

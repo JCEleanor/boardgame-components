@@ -1,28 +1,28 @@
-import React from 'react';
+import React from 'react'
 // import {IoLocationSharp} from 'react-icons/io'
-import { ImPhone } from "react-icons/im";
-import { MdLocationOn } from "react-icons/md";
+import { ImPhone } from "react-icons/im"
+import { MdLocationOn } from "react-icons/md"
 
-import TimeButton from "./TimeButton";
-import "./store.css";
+import TimeButton from "./TimeButton"
+import "./store.css"
 
 const Store = (props) => {
   // availibility: {13: true, 14: true, 15: true, 16: true, ...},
   const { storeId, storeName, storeImg, address, tel, availibility } =
-    props.store;
-  const { onLocationAndTimeChange, locationAndTime } = props;
+    props.store
+  const { onLocationAndTimeChange, locationAndTime } = props
 
-  const buttons = [];
+  const buttons = []
   for (const [key, isAvailible] of Object.entries(availibility)) {
     buttons.push(
       <TimeButton
         key={key}
-        value={{ storeId, time: key }}
+        value={{ storeName, time: key }}
         isAvailible={isAvailible}
         onLocationAndTimeChange={onLocationAndTimeChange}
         locationAndTime={locationAndTime}
       />
-    );
+    )
   }
 
   return (
@@ -47,7 +47,7 @@ const Store = (props) => {
         <div className="time-button-group">{buttons}</div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Store;
+export default Store

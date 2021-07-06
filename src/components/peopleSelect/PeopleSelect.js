@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import PeopleRadioButton from "./PeopleRadioButton";
+import React, { useState } from "react"
+import PeopleRadioButton from "./PeopleRadioButton"
 
 const PeopleSelect = () => {
-  const [selected, setSelected] = useState("2");
-  console.log(selected, "人");
+  const [selected, setSelected] = useState("2")
+  console.log(selected, "人")
   return (
     // adjudt height later
     <div>
@@ -36,7 +36,7 @@ const PeopleSelect = () => {
         onChange={setSelected}
       />
     </div>
-  );
-};
+  )
+}
 
-export default PeopleSelect;
+export default PeopleSelect

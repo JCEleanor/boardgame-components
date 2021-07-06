@@ -1,7 +1,7 @@
-import React from 'react';
-import "./bookingConfirm.css";
-import BoardingPass from "../components/boardingPass/BoardingPass";
-import Button from "../components/Button";
+import React from 'react'
+import "./bookingConfirm.css"
+import BoardingPass from "../components/boardingPass/BoardingPass"
+import Button from "../components/Button"
 
 const BookingConfirm = () => {
   return (
@@ -14,7 +14,7 @@ const BookingConfirm = () => {
         <Button link="/booking-success" buttonText="確認預約" className="" />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default BookingConfirm;
+export default BookingConfirm

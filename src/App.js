@@ -1,9 +1,9 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React from "react"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
-import BookingStep from "./pages/BookingStep";
-import BookingProcess from "./pages/BookingProcess";
-import BookingConfirm from "./pages/BookingConfirm";
+import BookingStep from "./pages/BookingStep"
+import BookingProcess from "./pages/BookingProcess"
+import BookingConfirm from "./pages/BookingConfirm"
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
       </Switch>
       {/* <Footer/> */}
     </Router>
-  );
-};
+  )
+}
 
-export default App;
+export default App

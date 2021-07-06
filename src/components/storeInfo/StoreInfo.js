@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { store1, store2 } from "../../storeData";
-import Store from "./Store";
+import React, { useState } from "react"
+import { store1, store2 } from "../../storeData"
+import Store from "./Store"
 
 const StoreInfo = () => {
   const [locationAndTime, setLocationAndTime] = useState({
-    storeId: null,
+    storeName: null,
     time: null,
-  });
+  })
 
-  console.log(locationAndTime);
+  console.log(locationAndTime)
 
   return (
     // to do: a filter button to either show all stores or show only one based on user input
@@ -24,7 +24,7 @@ const StoreInfo = () => {
         locationAndTime={locationAndTime}
       />
     </>
-  );
-};
+  )
+}
 
-export default StoreInfo;
+export default StoreInfo

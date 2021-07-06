@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 const Carousel = () => {
-  return <div></div>;
-};
+  return <div></div>
+}
 
-export default Carousel;
+export default Carousel

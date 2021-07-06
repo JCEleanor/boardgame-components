@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import "./StepCard.css";
+import React, { useState } from 'react'
+import "./StepCard.css"
 
 const StepCard = (props) => {
   //props: step (str), stepIcon(img, src), Hover(component), stepImage(img,src), stepHeader(str), stepDetail(str)
@@ -12,13 +12,13 @@ const StepCard = (props) => {
     stepImage,
     stepHeader,
     stepDetail,
-  } = props.step;
+  } = props.step
 
   //for components' hover state
-  const [hover, setHover] = useState(false);
+  const [hover, setHover] = useState(false)
   const toggleHover = () => {
-    setHover(!hover);
-  };
+    setHover(!hover)
+  }
 
   return (
     <div
@@ -47,7 +47,7 @@ const StepCard = (props) => {
         <img src={stepIcon} alt="step" />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default StepCard;
+export default StepCard

@@ -1,9 +1,9 @@
-import React from 'react';
-import "./bookingProcess.css";
-import DatePicker from "../components/calendar/DatePicker";
-import PeopleSelect from "../components/peopleSelect/PeopleSelect";
-import StoreInfo from "../components/storeInfo/StoreInfo";
-import Button from "../components/Button";
+import React from 'react'
+import "./bookingProcess.css"
+import DatePicker from "../components/calendar/DatePicker"
+import PeopleSelect from "../components/peopleSelect/PeopleSelect"
+import StoreInfo from "../components/storeInfo/StoreInfo"
+import Button from "../components/Button"
 
 const BookingProcess = () => {
   return (
@@ -26,7 +26,7 @@ const BookingProcess = () => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default BookingProcess;
+export default BookingProcess

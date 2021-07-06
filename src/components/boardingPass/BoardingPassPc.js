@@ -1,8 +1,8 @@
-import React from "react";
-import "./boardingPass.css";
-import { bookingInfo } from "../../orderData";
-import boardingPass from "../../images/boardingPass.png";
-import boardingPassStamp from "../../images/boardingPassStamp.png";
+import React from "react"
+import "./boardingPass.css"
+import { bookingInfo } from "../../orderData"
+import boardingPass from "../../images/boardingPass.png"
+import boardingPassStamp from "../../images/boardingPassStamp.png"
 
 const {
   bookingId,
@@ -13,7 +13,7 @@ const {
   bookingContact,
   people,
   storeName,
-} = bookingInfo;
+} = bookingInfo
 
 const BoardingPassPc = () => {
   return (
@@ -64,7 +64,7 @@ const BoardingPassPc = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default BoardingPassPc;
+export default BoardingPassPc
