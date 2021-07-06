@@ -1,0 +1,21 @@
+.store-select-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.store-select-button {
+    font-size: 1.2rem;
+    min-width: 170px;
+	color: var(--white);
+	padding: 10px 20px;
+	border: transparent;
+
+    border-radius: 5px;
+    background: #b388fe;
+    box-shadow:  2px 2px 2px #a57dea,
+                 -2px -2px 2px #c193ff;
+}
+
+.store-select-button img {
+    margin-right: 15px;
+}
