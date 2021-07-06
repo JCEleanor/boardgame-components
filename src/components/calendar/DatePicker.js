@@ -1,19 +1,19 @@
-import React, { useState } from "react"
-import Calendar from "react-calendar"
-import "./datePicker.css"
+import React from 'react'
+import Calendar from 'react-calendar'
+import './datePicker.css'
 
-function DatePicker() {
-  const today = new Date() //need to be formate as yyyy-mm-dd
-  const [date, setDate] = useState(today)
-  console.log(date)
+function DatePicker(props) {
+  // selectedDate: default value = new Date()
+  const { selectedDate, setSelectedDate } = props
+
 
   return (
     <Calendar
-      onChange={setDate}
+      onChange={setSelectedDate}
       // value={date}
-      defaultValue={today}
+      defaultValue={selectedDate}
       locale={"en"}
-      minDate={today}
+      minDate={selectedDate}
       next2Label={null}
       prev2Label={null}
     />

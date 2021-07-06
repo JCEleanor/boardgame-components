@@ -5,7 +5,7 @@ import flat from "../../images/flat.svg"
 
 const PeopleRadioButton = (props) => {
   const { selected, onChange, text, iconLength, value } = props
-
+  // onchange = setPeople 原來是setSelected
   return (
     <div className="people-select-container">
       <div
