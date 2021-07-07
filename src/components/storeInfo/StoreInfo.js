@@ -1,12 +1,12 @@
-import React from "react";
-import { store1, store2 } from "../../storeData";
-import Store from "./Store";
+import React from 'react'
+import { store1, store2 } from '../../storeData'
+import Store from './Store'
 
 const StoreInfo = (props) => {
-  const { locationAndTime, setLocationAndTime, showStores } = props;
+  const { locationAndTime, setLocationAndTime, showStores } = props
 
   switch (showStores) {
-    case "daan":
+    case 'daan':
       return (
         <>
           <Store
@@ -16,8 +16,8 @@ const StoreInfo = (props) => {
             locationAndTime={locationAndTime}
           />
         </>
-      );
-    case "songshan":
+      )
+    case 'songshan':
       return (
         <>
           <Store
@@ -27,7 +27,7 @@ const StoreInfo = (props) => {
             locationAndTime={locationAndTime}
           />
         </>
-      );
+      )
     default:
       return (
         <>
@@ -44,8 +44,8 @@ const StoreInfo = (props) => {
             locationAndTime={locationAndTime}
           />
         </>
-      );
+      )
   }
-};
+}
 
-export default StoreInfo;
+export default StoreInfo
