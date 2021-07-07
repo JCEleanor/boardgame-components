@@ -1,35 +1,38 @@
 import React from 'react'
 import './storeSelect.css'
-import StoreSelect from './StoreSelect'
 import allStore from '../../images/allStore.svg'
 import daanStore from '../../images/daanStore.svg'
 import songShanStore from '../../images/songShanStore.svg'
+import SelectButton from '../SelectButton'
 
 const StoreSelectButtons = (props) => {
   const { store, setStore } = props
 
   return (
     <div className="store-select-wrapper">
-      <StoreSelect
+      <SelectButton
         text="全部"
         icon={allStore}
-        setStore={setStore}
-        value="all"
-        store={store}
+        setValue={setStore}
+        buttonValue="all"
+        value={store}
+        customStyle="store-select-button"
       />
-      <StoreSelect
+      <SelectButton
         text="大安店"
         icon={daanStore}
-        setStore={setStore}
-        value="daan"
-        store={store}
+        setValue={setStore}
+        buttonValue="daan"
+        value={store}
+        customStyle="store-select-button"
       />
-      <StoreSelect
+      <SelectButton
         text="松山店"
         icon={songShanStore}
-        setStore={setStore}
-        value="songshan"
-        store={store}
+        setValue={setStore}
+        buttonValue="songshan"
+        value={store}
+        customStyle="store-select-button"
       />
     </div>
   )
