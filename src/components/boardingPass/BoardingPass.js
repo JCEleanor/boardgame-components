@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react"
-import BoardingPassPc from "./BoardingPassPc"
-import BoardingPassMobile from "./BoardingPassMobile"
+import React, { useEffect, useState } from 'react'
+import BoardingPassPc from './BoardingPassPc'
+import BoardingPassMobile from './BoardingPassMobile'
 
 const BoardingPass = () => {
   const [width, setWidth] = useState(window.innerWidth)
@@ -11,9 +11,9 @@ const BoardingPass = () => {
       //console.log('updating width')
     }
 
-    window.addEventListener("resize", updateWindowDimensions)
+    window.addEventListener('resize', updateWindowDimensions)
 
-    return () => window.removeEventListener("resize", updateWindowDimensions)
+    return () => window.removeEventListener('resize', updateWindowDimensions)
   }, [])
 
   //console.log('current width: ', width)

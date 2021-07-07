@@ -1,12 +1,12 @@
-import React from "react";
-import "./storeSelect.css";
-import StoreSelect from "./StoreSelect";
-import allStore from "../../images/allStore.svg";
-import daanStore from "../../images/daanStore.svg";
-import songShanStore from "../../images/songShanStore.svg";
+import React from 'react'
+import './storeSelect.css'
+import StoreSelect from './StoreSelect'
+import allStore from '../../images/allStore.svg'
+import daanStore from '../../images/daanStore.svg'
+import songShanStore from '../../images/songShanStore.svg'
 
 const StoreSelectButtons = (props) => {
-  const { store, setStore } = props;
+  const { store, setStore } = props
 
   return (
     <div className="store-select-wrapper">
@@ -32,7 +32,7 @@ const StoreSelectButtons = (props) => {
         store={store}
       />
     </div>
-  );
-};
+  )
+}
 
-export default StoreSelectButtons;
+export default StoreSelectButtons

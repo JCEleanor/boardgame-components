@@ -21,6 +21,7 @@ mobile: w: 325px h: 285px */
 	border: 1px solid var(--light-purple);
 	border-radius: 10px;
 	color: var(--white);
+	margin-right: auto;
 }
 
 .react-calendar button {

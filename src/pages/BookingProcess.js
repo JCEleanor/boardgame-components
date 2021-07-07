@@ -15,6 +15,7 @@ const BookingProcess = () => {
   const [people, setPeople] = useState('2')
 
   // store value could be: all (default), daan, songshan
+  // 控制頁面要出現哪家分店
   const [store, setStore] = useState('all')
 
   const [locationAndTime, setLocationAndTime] = useState({
@@ -24,8 +25,6 @@ const BookingProcess = () => {
   // store1 & store2 are the default value, aka when server failed, it won't break at least phew
   const [store1Info, setStore1Info] = useState(store1)
   const [store2Info, setStore2Info] = useState(store2)
-
-  // if object content change will trigger useEffect??
 
   useEffect(() => {
     // every time the dependency arr changes, make request to the server
@@ -39,7 +38,6 @@ const BookingProcess = () => {
         const { store1, store2 } = res.data
         setStore1Info(store1)
         setStore2Info(store2)
-        //console.log(store1, store2)
       })
       .catch((e) => {
         console.log(e)
@@ -48,9 +46,21 @@ const BookingProcess = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedDate])
 
+  // 最後要傳到下一頁的data
+  console.log(
+    '日期：',
+    selectedDate,
+    '人數：',
+    people,
+    '地點：',
+    locationAndTime.storeName,
+    '預約時間：',
+    locationAndTime.time
+  )
+
   return (
     <div className="container p-5">
-      <div className="row mb-5 d-flex justify-content-between">
+      <div className="row mb-5 d-flex">
         <DatePicker
           selectedDate={selectedDate}
           setSelectedDate={setSelectedDate}

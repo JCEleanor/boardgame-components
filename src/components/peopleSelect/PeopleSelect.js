@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import PeopleRadioButton from './PeopleRadioButton'
+import astronaut from '../../images/astronaut.svg'
+import SelectButton from '../SelectButton'
 
 const PeopleSelect = (props) => {
-  const {people, setPeople} = props
+  const { people, setPeople } = props
 
-  return (
-    // adjudt height later
+  const [width, setWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    const updateWindowDimensions = () => {
+      setWidth(window.innerWidth)
+      //console.log('updating width')
+    }
+
+    window.addEventListener('resize', updateWindowDimensions)
+
+    return () => window.removeEventListener('resize', updateWindowDimensions)
+  }, [])
+
+  //console.log('current width: ', width)
+  // width只是暫時設定為800 最後以最後的style guide為主
+  return width > 800 ? (
     <div>
       <PeopleRadioButton
         value="2"
@@ -34,6 +50,41 @@ const PeopleSelect = (props) => {
         text="8人以上"
         iconLength={10}
         onChange={setPeople}
+      />
+    </div>
+  ) : (
+    <div className="booking-people-select-button-mobile-wrapper">
+      <SelectButton
+        text="2人"
+        icon={astronaut}
+        setValue={setPeople}
+        value={people}
+        buttonValue="2"
+        customStyle="booking-people-select-button-mobile"
+      />
+      <SelectButton
+        text="4人"
+        icon={astronaut}
+        setValue={setPeople}
+        value={people}
+        buttonValue="4"
+        customStyle="booking-people-select-button-mobile"
+      />
+      <SelectButton
+        text="6人"
+        icon={astronaut}
+        setValue={setPeople}
+        value={people}
+        buttonValue="6"
+        customStyle="booking-people-select-button-mobile"
+      />
+      <SelectButton
+        text="8人"
+        icon={astronaut}
+        setValue={setPeople}
+        value={people}
+        buttonValue="8"
+        customStyle="booking-people-select-button-mobile"
       />
     </div>
   )

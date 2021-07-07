@@ -87,3 +87,23 @@
 .astronaut-icon-wrapper {
 	margin-right: auto;
 }
+
+/* for mobile buttons */
+.booking-people-select-button-mobile-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.booking-people-select-button-mobile {
+    font-size: 1.2rem;
+    min-width: 100px;
+	color: var(--white);
+	padding: 8px 20px;
+    margin-top: 35px;
+	border: transparent;
+
+    border-radius: 5px;
+    background: #b388fe;
+    box-shadow:  2px 2px 2px #a57dea,
+                 -2px -2px 2px #c193ff;
+}
