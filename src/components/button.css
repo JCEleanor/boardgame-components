@@ -8,3 +8,9 @@
 	background: linear-gradient(145deg, #37afff, #2e94e2);
 	box-shadow: 2px 2px 2px #2985cb, -2px -2px 2px #3dc3ff;
 }
+
+.button-disabled {
+	background: #878787;
+	box-shadow:  2px 2px 2px #7e7e7e,
+             -2px -2px 2px #909090;
+}

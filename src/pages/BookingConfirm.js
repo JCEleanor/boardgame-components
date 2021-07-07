@@ -4,6 +4,7 @@ import BoardingPass from '../components/boardingPass/BoardingPass'
 import Button from '../components/Button'
 
 const BookingConfirm = () => {
+  console.log(window.localStorage)
   return (
     <div className="container p-5">
       <div className="booking-confirm-text">您好，請確認您的預約資訊</div>

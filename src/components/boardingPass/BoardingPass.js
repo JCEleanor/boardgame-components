@@ -8,7 +8,7 @@ const BoardingPass = () => {
 
   //console.log('current width: ', width)
 
-  return width > 1195 ? <BoardingPassPc /> : <BoardingPassMobile />
+  return width > 1000 ? <BoardingPassPc /> : <BoardingPassMobile />
 }
 
 export default BoardingPass

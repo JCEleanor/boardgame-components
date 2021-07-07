@@ -47,16 +47,21 @@ const BookingProcess = () => {
   }, [selectedDate])
 
   // 最後要傳到下一頁的data
-  console.log(
-    '日期：',
-    selectedDate,
-    '人數：',
-    people,
-    '地點：',
-    locationAndTime.storeName,
-    '預約時間：',
-    locationAndTime.time
-  )
+  // console.log(
+  //   '日期：',
+  //   selectedDate,
+  //   '人數：',
+  //   people,
+  //   '地點：',
+  //   locationAndTime.storeName,
+  //   '預約時間：',
+  //   locationAndTime.time
+  // )
+
+  localStorage.setItem('date', selectedDate)
+  localStorage.setItem('numberOfPeople', people)
+  localStorage.setItem('location', locationAndTime.storeName)
+  localStorage.setItem('time', locationAndTime.time)
 
   return (
     <div className="container p-5">
@@ -78,11 +83,16 @@ const BookingProcess = () => {
         store2Info={store2Info}
       />
       <div className="booking-process-button-wrapper">
-        <Button link="" buttonText="回上一頁" className={null} />
+        <Button link="" buttonText="回上一頁" className={''} />
         <Button
           link="/booking-confirm"
           buttonText="確認預約"
-          className={null}
+          className={''}
+          isDisabled={
+            locationAndTime.storeName === null && locationAndTime.time === null
+              ? true
+              : false
+          }
         />
       </div>
     </div>
