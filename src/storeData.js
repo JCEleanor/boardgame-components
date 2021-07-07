@@ -1,3 +1,4 @@
+// 這個檔案目前不需要了，也許可以拿來做error handling, 如果資料庫連結失敗就用這個檔案
 export const store1 = {
   storeId: '1',
   storeImg: 'https://fakeimg.pl/300/',

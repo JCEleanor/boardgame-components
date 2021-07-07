@@ -1,17 +1,23 @@
 import React from 'react'
-import { store1, store2 } from '../../storeData'
 import Store from './Store'
 
 const StoreInfo = (props) => {
-  const { locationAndTime, setLocationAndTime, showStores } = props
+  const {
+    locationAndTime,
+    setLocationAndTime,
+    showStores,
+    store1Info,
+    store2Info,
+  } = props
 
   switch (showStores) {
+    // don't fucking repeat yourself!
     case 'daan':
       return (
         <>
           <Store
             // 大安店
-            store={store1}
+            store={store1Info}
             onLocationAndTimeChange={setLocationAndTime}
             locationAndTime={locationAndTime}
           />
@@ -22,7 +28,7 @@ const StoreInfo = (props) => {
         <>
           <Store
             // 松山店
-            store={store2}
+            store={store2Info}
             onLocationAndTimeChange={setLocationAndTime}
             locationAndTime={locationAndTime}
           />
@@ -33,13 +39,13 @@ const StoreInfo = (props) => {
         <>
           <Store
             // 大安店
-            store={store1}
+            store={store1Info}
             onLocationAndTimeChange={setLocationAndTime}
             locationAndTime={locationAndTime}
           />
           <Store
             // 松山店
-            store={store2}
+            store={store2Info}
             onLocationAndTimeChange={setLocationAndTime}
             locationAndTime={locationAndTime}
           />

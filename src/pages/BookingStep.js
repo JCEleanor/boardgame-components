@@ -1,8 +1,8 @@
 import React from 'react'
-import "./bookingStep.css"
-import Button from "../components/Button"
-import StepCard from "../components/stepCards/StepCard"
-import { step1, step2, step3, step4 } from "../stepData"
+import './bookingStep.css'
+import Button from '../components/Button'
+import StepCard from '../components/stepCards/StepCard'
+import { step1, step2, step3, step4 } from '../stepData'
 
 const BookingStep = () => {
   return (
@@ -21,7 +21,7 @@ const BookingStep = () => {
           <div className="booking-steps-text">
             有任何問題嗎？歡迎查看我們的FAQ
           </div>
-          <Button link={"/#"} buttonText={"FAQ"} />
+          <Button link={'/#'} buttonText={'FAQ'} />
         </div>
       </div>
     </>
