@@ -1,20 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { useScreen } from '../../hooks/useScreen'
 import BoardingPassPc from './BoardingPassPc'
 import BoardingPassMobile from './BoardingPassMobile'
 
 const BoardingPass = () => {
-  const [width, setWidth] = useState(window.innerWidth)
-
-  useEffect(() => {
-    const updateWindowDimensions = () => {
-      setWidth(window.innerWidth)
-      //console.log('updating width')
-    }
-
-    window.addEventListener('resize', updateWindowDimensions)
-
-    return () => window.removeEventListener('resize', updateWindowDimensions)
-  }, [])
+  const [width] = useScreen()
 
   //console.log('current width: ', width)
 

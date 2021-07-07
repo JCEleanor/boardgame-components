@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { useScreen } from '../../hooks/useScreen'
 import PeopleRadioButton from './PeopleRadioButton'
 import astronaut from '../../images/astronaut.svg'
 import SelectButton from '../SelectButton'
@@ -6,18 +7,7 @@ import SelectButton from '../SelectButton'
 const PeopleSelect = (props) => {
   const { people, setPeople } = props
 
-  const [width, setWidth] = useState(window.innerWidth)
-
-  useEffect(() => {
-    const updateWindowDimensions = () => {
-      setWidth(window.innerWidth)
-      //console.log('updating width')
-    }
-
-    window.addEventListener('resize', updateWindowDimensions)
-
-    return () => window.removeEventListener('resize', updateWindowDimensions)
-  }, [])
+  const [width] = useScreen()
 
   //console.log('current width: ', width)
   // width只是暫時設定為800 最後以最後的style guide為主
