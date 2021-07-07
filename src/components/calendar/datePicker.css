@@ -10,6 +10,7 @@ mobile: w: 325px h: 285px */
 	--white: #fff;
 	--gray: #878787;
 }
+/* 我完全不知道我在選什麼 可能要研究一下原始碼ＱＱ */
 
 .react-calendar {
 	font-size: 1rem;
@@ -121,10 +122,8 @@ mobile: w: 325px h: 285px */
 	color: var(--yellow);
 }
 
-.react-calendar__tile--now {
-	font-weight: 900;
-	border: 1px solid var(--light-purple);
-	border-radius: 75% 75%;
+button.react-calendar__tile--now {
+	color: var(--yellow);
 }
 
 .react-calendar__tile--hasActive {
@@ -148,7 +147,7 @@ mobile: w: 325px h: 285px */
 	color: var(--yellow);
 }
 
-.react-calendar__tile--active {
+button.react-calendar__tile--active {
 	background: transparent;
 	color: white;
 	border: 1px solid var(--light-purple);
@@ -160,9 +159,4 @@ mobile: w: 325px h: 285px */
 
 .react-calendar__navigation__label {
 	pointer-events: none;
-}
-
-button.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--range.react-calendar__tile--rangeStart.react-calendar__tile--rangeEnd.react-calendar__tile--rangeBothEnds.react-calendar__month-view__days__day {
-	border: 1px solid var(--light-purple);
-	border-radius: 50%;
 }
