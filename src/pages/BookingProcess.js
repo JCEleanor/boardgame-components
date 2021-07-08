@@ -33,13 +33,14 @@ const BookingProcess = () => {
         params: { people, selectedDate },
       })
       .then((res) => {
-        // 後端回傳的資料：{daan: {13: true, 14: true, 15: false...}, songshan: {13: flase, 14: flase...}}
+        // client要求的資料格式列在storeData這個檔案
         // then pass the data to TimeButton component, then use className to en/disable buttons
         const { store1, store2 } = res.data
         setStore1Info(store1)
         setStore2Info(store2)
       })
       .catch((e) => {
+        // todo: handle error message
         console.log(e)
       })
 
@@ -47,17 +48,6 @@ const BookingProcess = () => {
   }, [selectedDate])
 
   // 最後要傳到下一頁的data
-  // console.log(
-  //   '日期：',
-  //   selectedDate,
-  //   '人數：',
-  //   people,
-  //   '地點：',
-  //   locationAndTime.storeName,
-  //   '預約時間：',
-  //   locationAndTime.time
-  // )
-
   localStorage.setItem('date', selectedDate)
   localStorage.setItem('numberOfPeople', people)
   localStorage.setItem('location', locationAndTime.storeName)
@@ -83,7 +73,7 @@ const BookingProcess = () => {
         store2Info={store2Info}
       />
       <div className="booking-process-button-wrapper">
-        <Button link="" buttonText="回上一頁" className={''} />
+        <Button link="/booking-steps" buttonText="回上一頁" className={''} />
         <Button
           link="/booking-confirm"
           buttonText="確認預約"
