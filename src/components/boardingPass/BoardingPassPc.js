@@ -4,6 +4,7 @@ import boardingPass from '../../images/boardingPass.png'
 import boardingPassStamp from '../../images/boardingPassStamp.png'
 
 const BoardingPassPc = (props) => {
+  const today = new Date().toISOString().split('T')[0]
   const {
     // 在確認頁面還不會有訂單編號
     bookingId,
@@ -40,7 +41,7 @@ const BoardingPassPc = (props) => {
           </div>
           <div className="booking-main-info-row">
             <div className="booking-info-title">訂單成立日</div>
-            <div className="booking-info-content">2021-07-07</div>
+            <div className="booking-info-content">{today}</div>
           </div>
           <div className="booking-main-info-row">
             <div className="booking-info-title">聯絡資訊</div>

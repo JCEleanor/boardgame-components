@@ -48,7 +48,11 @@ const BookingProcess = () => {
   }, [selectedDate])
 
   // 最後要傳到下一頁的data
-  localStorage.setItem('date', selectedDate)
+  // Q: 要用localStorage or sessionStorage
+  localStorage.setItem('date', selectedDate.toISOString().split('T')[0])
+  // 因為toISOString, selectedDate會-1天
+  console.log(selectedDate.toISOString().split('T')[0])
+  console.log(selectedDate) //是正確的
   localStorage.setItem('numberOfPeople', people)
   localStorage.setItem('location', locationAndTime.storeName)
   localStorage.setItem('time', locationAndTime.time)

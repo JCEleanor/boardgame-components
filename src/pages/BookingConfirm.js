@@ -4,11 +4,9 @@ import BoardingPass from '../components/boardingPass/BoardingPass'
 import Button from '../components/Button'
 
 const BookingConfirm = () => {
-  console.log(window.localStorage)
-
   const orderData = {
-    //bookingDate: window.localStorage.date,
-    bookingDate: '2021-07-31',
+    bookingDate: window.localStorage.date,
+    // bookingDate: '2021-07-31',
     startTime: window.localStorage.time,
     numberOfPeople: window.localStorage.numberOfPeople,
     storeName: window.localStorage.location,
