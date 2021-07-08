@@ -1,10 +1,10 @@
-import React from "react"
-import "./boardingPassMobile.css"
-import { bookingInfo } from "../../orderData"
+import React from 'react'
+import './boardingPassMobile.css'
+import { bookingInfo } from '../../orderData'
 
 // idk why the resolution is like crap
-import boardingPassMobile from "../../images/boardingPassMobile.png"
-import boardingPassStampMobile from "../../images/boardingPassStampMobile.png"
+import boardingPassMobile from '../../images/boardingPassMobile.png'
+import boardingPassStampMobile from '../../images/boardingPassStampMobile.png'
 
 const {
   bookingId,
@@ -19,7 +19,7 @@ const {
 
 const BoardingPassMobile = () => {
   return (
-    <div className="boarding-pass-mobile-wrapper" style={{ fontSize: "12px" }}>
+    <div className="boarding-pass-mobile-wrapper" style={{ fontSize: '12px' }}>
       <img
         className="boarding-pass"
         src={bookingId ? boardingPassStampMobile : boardingPassMobile}

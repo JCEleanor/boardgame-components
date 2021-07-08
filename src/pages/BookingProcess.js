@@ -47,12 +47,22 @@ const BookingProcess = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedDate])
 
+  // todo: repetitve code=> make a module
+  const dateFormatter = (date) => {
+    let month = '' + (date.getMonth() + 1)
+    let day = '' + date.getDate()
+    let year = date.getFullYear()
+    if (month.length < 2) month = '0' + month
+    if (day.length < 2) day = '0' + day
+    return [year, month, day].join('-')
+  }
+
   // 最後要傳到下一頁的data
   // Q: 要用localStorage or sessionStorage
-  localStorage.setItem('date', selectedDate.toISOString().split('T')[0])
-  // 因為toISOString, selectedDate會-1天
-  console.log(selectedDate.toISOString().split('T')[0])
-  console.log(selectedDate) //是正確的
+  // localStorage.setItem('date', selectedDate.toISOString().split('T')[0])
+  // 因為toISOString?, selectedDate會-1天
+  //console.log(dateFormatter(selectedDate))
+  localStorage.setItem('date', dateFormatter(selectedDate))
   localStorage.setItem('numberOfPeople', people)
   localStorage.setItem('location', locationAndTime.storeName)
   localStorage.setItem('time', locationAndTime.time)
