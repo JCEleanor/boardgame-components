@@ -23,6 +23,8 @@ const BookingConfirm = () => {
       .catch((e) => {
         console.log(e)
       })
+
+    // 是否要localStorage.removeItem
   }
 
   //console.log(orderData)

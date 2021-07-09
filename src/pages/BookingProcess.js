@@ -55,17 +55,16 @@ const BookingProcess = () => {
     if (month.length < 2) month = '0' + month
     if (day.length < 2) day = '0' + day
     return [year, month, day].join('-')
+    //expected output like 2021-07-21
+    //todo: 2-30 可能會沒有=>day.js
   }
 
   // 最後要傳到下一頁的data
-  // Q: 要用localStorage or sessionStorage
-  // localStorage.setItem('date', selectedDate.toISOString().split('T')[0])
-  // 因為toISOString?, selectedDate會-1天
-  //console.log(dateFormatter(selectedDate))
   localStorage.setItem('date', dateFormatter(selectedDate))
   localStorage.setItem('numberOfPeople', people)
   localStorage.setItem('location', locationAndTime.storeName)
   localStorage.setItem('time', locationAndTime.time)
+  console.log(localStorage)
 
   return (
     <div className="container p-5">

@@ -4,7 +4,9 @@ import boardingPass from '../../images/boardingPass.png'
 import boardingPassStamp from '../../images/boardingPassStamp.png'
 
 const BoardingPassPc = (props) => {
+  // 這邊應該統一用同樣的dateFormatter處理
   const today = new Date().toISOString().split('T')[0]
+
   const {
     // 在確認頁面還不會有訂單編號
     bookingId,
@@ -51,29 +53,21 @@ const BoardingPassPc = (props) => {
           </div>
           <div className="booking-main-info-row">
             <div className="booking-info-title">人數</div>
-            <div className="booking-info-content">
-              {numberOfPeople || 10} 人
-            </div>
+            <div className="booking-info-content">{numberOfPeople} 人</div>
           </div>
         </div>
         <div className="sub-text-wrapper">
           <div className="booking-sub-info-row">
             <div className="booking-sub-info-title">訂位日期</div>
-            <div className="booking-sub-info-content">
-              {bookingDate || '2021-07-31'}
-            </div>
+            <div className="booking-sub-info-content">{bookingDate}</div>
           </div>
           <div className="booking-sub-info-row">
             <div className="booking-sub-info-title">訂位時間</div>
-            <div className="booking-sub-info-content">
-              {startTime || '13'}:00
-            </div>
+            <div className="booking-sub-info-content">{startTime}:00</div>
           </div>
           <div className="booking-sub-info-row">
             <div className="booking-sub-info-title">訂位地點</div>
-            <div className="booking-sub-info-content">
-              {storeName || '大安店'}
-            </div>
+            <div className="booking-sub-info-content">{storeName}</div>
           </div>
         </div>
       </div>
