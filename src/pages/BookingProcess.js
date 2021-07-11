@@ -89,7 +89,7 @@ const BookingProcess = () => {
       <div className="booking-process-button-wrapper">
         <Button link="/booking-steps" buttonText="回上一頁" className={''} />
         <Button
-          link="/booking-confirm"
+          link="/booking/confirm"
           buttonText="確認預約"
           className={''}
           isDisabled={

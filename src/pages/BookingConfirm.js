@@ -7,7 +7,6 @@ import Button from '../components/Button'
 const BookingConfirm = (props) => {
   const orderData = {
     date: window.localStorage.date,
-    // bookingDate: '2021-07-31',
     startTime: window.localStorage.time,
     numberOfPeople: window.localStorage.numberOfPeople,
     storeName: window.localStorage.location,
@@ -19,7 +18,7 @@ const BookingConfirm = (props) => {
       .then((res) => {
         setTimeout(() => {
           // todo: add a spinner
-          props.history.push(`/booking-success/${res.data}`)
+          props.history.push(`/booking/success/${res.data}`)
         }, 100)
       })
       .catch((e) => {

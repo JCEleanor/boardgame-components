@@ -12,10 +12,10 @@ const App = () => {
       {/* <Navbar/> */}
       <Switch>
         {/* routes: or '/booking/steps'. '/booking/confirm', '/booking/success/:id' */}
-        <Route path="/booking-steps" component={BookingStep} />
-        <Route path="/booking" component={BookingProcess} />
-        <Route path="/booking-confirm" component={BookingConfirm} />
-        <Route path="/booking-success/:id" component={BookingSuccess} />
+        <Route path="/booking/steps" exact component={BookingStep} />
+        <Route path="/booking" exact component={BookingProcess} />
+        <Route path="/booking/confirm" exact component={BookingConfirm} />
+        <Route path="/booking/success/:id" component={BookingSuccess} />
       </Switch>
       {/* <Footer/> */}
     </Router>
