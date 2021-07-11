@@ -8,23 +8,20 @@ const BoardingPassPc = (props) => {
   const today = new Date().toISOString().split('T')[0]
 
   const {
-    // 在確認頁面還不會有訂單編號
-    bookingId,
-    bookingDate,
-    startTime,
-    // 當前登入的會員
-    bookingName,
-    // 當前登入的會員
-    bookingContact,
+    date,
     numberOfPeople,
+    reservationId,
+    startTime,
     storeName,
+    userName,
+    userPhone,
   } = props
-
+  //const farmattedDate = date.split('T')[0]
   return (
     <div className="boarding-pass-wrapper">
       <img
         className="bording-pass"
-        src={bookingId ? boardingPassStamp : boardingPass}
+        src={reservationId ? boardingPassStamp : boardingPass}
         alt="boarding pass"
       />
       <div className="booking-info-wrapper">
@@ -32,14 +29,12 @@ const BoardingPassPc = (props) => {
           <div className="booking-main-info-row">
             <div className="booking-info-title">訂單編號</div>
             <div className="booking-info-content">
-              {bookingId || <i>待確認</i>}
+              {reservationId || <i>待確認</i>}
             </div>
           </div>
           <div className="booking-main-info-row">
             <div className="booking-info-title">訂位大名</div>
-            <div className="booking-info-content">
-              {bookingName || '張祐如'}
-            </div>
+            <div className="booking-info-content">{userName || '張祐如'}</div>
           </div>
           <div className="booking-main-info-row">
             <div className="booking-info-title">訂單成立日</div>
@@ -48,18 +43,21 @@ const BoardingPassPc = (props) => {
           <div className="booking-main-info-row">
             <div className="booking-info-title">聯絡資訊</div>
             <div className="booking-info-content">
-              {bookingContact || '0926554778'}
+              {userPhone || '0926554778'}
             </div>
           </div>
           <div className="booking-main-info-row">
             <div className="booking-info-title">人數</div>
-            <div className="booking-info-content">{numberOfPeople} 人</div>
+            <div className="booking-info-content">
+              {/* 到底是誰說要人數要用範圍的== */}
+              {numberOfPeople + ' - ' + (Number(numberOfPeople) + 2)} 人
+            </div>
           </div>
         </div>
         <div className="sub-text-wrapper">
           <div className="booking-sub-info-row">
             <div className="booking-sub-info-title">訂位日期</div>
-            <div className="booking-sub-info-content">{bookingDate}</div>
+            <div className="booking-sub-info-content">{date}</div>
           </div>
           <div className="booking-sub-info-row">
             <div className="booking-sub-info-title">訂位時間</div>

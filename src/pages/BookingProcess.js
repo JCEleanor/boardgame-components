@@ -28,9 +28,10 @@ const BookingProcess = () => {
 
   useEffect(() => {
     // every time the dependency arr changes, make request to the server
+    const formattedDate = dateFormatter(selectedDate)
     axios
       .get('http://localhost:8080/booking', {
-        params: { people, selectedDate },
+        params: { formattedDate },
       })
       .then((res) => {
         // client要求的資料格式列在storeData這個檔案
@@ -55,8 +56,8 @@ const BookingProcess = () => {
     if (month.length < 2) month = '0' + month
     if (day.length < 2) day = '0' + day
     return [year, month, day].join('-')
-    //expected output like 2021-07-21
-    //todo: 2-30 可能會沒有=>day.js
+    // expected output: 2021-07-21
+    // todo: 2-30 可能會沒有=>day.js
   }
 
   // 最後要傳到下一頁的data

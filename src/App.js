@@ -11,11 +11,11 @@ const App = () => {
     <Router>
       {/* <Navbar/> */}
       <Switch>
+        {/* routes: or '/booking/steps'. '/booking/confirm', '/booking/success/:id' */}
         <Route path="/booking-steps" component={BookingStep} />
         <Route path="/booking" component={BookingProcess} />
         <Route path="/booking-confirm" component={BookingConfirm} />
-        {/* success頁面待處理 */}
-        <Route path="/booking-success" component={BookingSuccess} />
+        <Route path="/booking-success/:id" component={BookingSuccess} />
       </Switch>
       {/* <Footer/> */}
     </Router>
