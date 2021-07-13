@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "./StepCard.css"
+import './StepCard.css'
 
 const StepCard = (props) => {
   //props: step (str), stepIcon(img, src), Hover(component), stepImage(img,src), stepHeader(str), stepDetail(str)
@@ -33,12 +33,12 @@ const StepCard = (props) => {
           <Hover
             link={link}
             buttonText={buttonText}
-            className={"card-button " + (hover ? "button-show" : "")}
+            className={'card-button ' + (hover ? 'button-show' : '')}
           />
         )}
       </div>
       <div className="step-header">
-        {" "}
+        {' '}
         <span className="step">{step}</span>
         {stepHeader}
       </div>

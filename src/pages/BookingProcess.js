@@ -65,7 +65,6 @@ const BookingProcess = () => {
   localStorage.setItem('numberOfPeople', people)
   localStorage.setItem('location', locationAndTime.storeName)
   localStorage.setItem('time', locationAndTime.time)
-  console.log(localStorage)
 
   return (
     <div className="container p-5">

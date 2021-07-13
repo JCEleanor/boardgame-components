@@ -11,7 +11,6 @@ const App = () => {
     <Router>
       {/* <Navbar/> */}
       <Switch>
-        {/* routes: or '/booking/steps'. '/booking/confirm', '/booking/success/:id' */}
         <Route path="/booking/steps" exact component={BookingStep} />
         <Route path="/booking" exact component={BookingProcess} />
         <Route path="/booking/confirm" exact component={BookingConfirm} />

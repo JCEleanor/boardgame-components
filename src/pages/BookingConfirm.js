@@ -16,6 +16,7 @@ const BookingConfirm = (props) => {
     axios
       .post('http://localhost:8080/booking', { ...orderData })
       .then((res) => {
+        console.log(res)
         setTimeout(() => {
           // todo: add a spinner
           props.history.push(`/booking/success/${res.data}`)
