@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import './bookingSuccess.css'
 import BoardingPass from '../components/boardingPass/BoardingPass'
+import Button from '../components/Button'
 
 const BookingSuccess = ({ match }) => {
   const reservationId = match.params.id
@@ -23,7 +25,22 @@ const BookingSuccess = ({ match }) => {
   return (
     <>
       <BoardingPass orderData={orderData} />
-      {/* {...orderData} */}
+
+      {/* todo: fix style */}
+      <div className="booking-success-button-wrapper">
+        <Button
+          link={'/'}
+          buttonText={'去商城逛逛'}
+          className="muted-purple-background"
+          isDisabled={false}
+        />
+        <Button
+          link={`/users/booking/${reservationId}`}
+          buttonText={'查看預約'}
+          className={null}
+          isDisabled={false}
+        />
+      </div>
     </>
   )
 }

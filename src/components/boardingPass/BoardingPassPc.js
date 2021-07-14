@@ -8,13 +8,13 @@ const BoardingPassPc = (props) => {
   const today = new Date().toISOString().split('T')[0]
 
   const {
-    date,
-    numberOfPeople,
+    date = '2021-07-28',
+    numberOfPeople = 2,
     reservationId,
-    startTime,
-    storeName,
-    userName,
-    userPhone,
+    startTime = 13,
+    storeName = '大安店',
+    userName = '張祐如',
+    userPhone = '0919145665',
   } = props
   //const farmattedDate = date.split('T')[0]
   return (

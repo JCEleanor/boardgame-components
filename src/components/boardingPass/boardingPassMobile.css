@@ -3,25 +3,27 @@
 .boarding-pass-mobile-wrapper {
 	width: 325px;
 	height: 368px;
-	position: relative;
+	position: relative;	
+	margin-left: auto;
+    margin-right: auto;
 	/* todo: fix font size */
 }
 .booking-info-wrapper-m {
 	position: absolute;
-	left: 15px;
-	bottom: 25px;
+	left: 55px;
+	bottom: 60px;
 
 	display: flex;
 	flex-direction: column;
 	height: 150px;
-	flex-wrap: wrap;
 }
 .booking-main-info-row-m {
 	display: flex;
-	padding-bottom: 5px;
-	margin-bottom: 6px;
+	justify-content: space-between;
+	padding-bottom: 2px;
+	margin-bottom: 5px;
 	margin-right: 10px;
-	width: 145px;
+	width: 200px;
 	border-bottom: 1px solid var(--light-purple);
 }
 
