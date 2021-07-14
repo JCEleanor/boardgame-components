@@ -1,6 +1,19 @@
+.booking-success-info-text {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.booking-success-boarding-pass-wrapper {
+}
+
 .booking-success-button-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .muted-purple-background {

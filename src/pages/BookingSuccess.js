@@ -24,22 +24,24 @@ const BookingSuccess = ({ match }) => {
 
   return (
     <>
-      <BoardingPass orderData={orderData} />
-
-      {/* todo: fix style */}
-      <div className="booking-success-button-wrapper">
-        <Button
-          link={'/'}
-          buttonText={'去商城逛逛'}
-          className="muted-purple-background"
-          isDisabled={false}
-        />
-        <Button
-          link={`/users/booking/${reservationId}`}
-          buttonText={'查看預約'}
-          className={null}
-          isDisabled={false}
-        />
+      <div className="container my-5">
+        <div className="booking-success-info-text">預約成功！</div>
+        <BoardingPass orderData={orderData} />
+        {/* todo: fix style */}
+        <div className="booking-success-button-wrapper">
+          <Button
+            link={'/'}
+            buttonText={'去商城逛逛'}
+            className="muted-purple-background"
+            isDisabled={false}
+          />
+          <Button
+            link={`/users/booking/${reservationId}`}
+            buttonText={'查看預約'}
+            className={null}
+            isDisabled={false}
+          />
+        </div>
       </div>
     </>
   )
