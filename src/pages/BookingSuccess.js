@@ -26,7 +26,9 @@ const BookingSuccess = ({ match }) => {
     <>
       <div className="container my-5">
         <div className="booking-success-info-text">預約成功！</div>
-        <BoardingPass orderData={orderData} />
+        <div class="booking-success-boarding-pass-wrapper">
+          <BoardingPass orderData={orderData} />
+        </div>
         {/* todo: fix style */}
         <div className="booking-success-button-wrapper">
           <Button

@@ -5,10 +5,12 @@ import BookingStep from './pages/BookingStep'
 import BookingProcess from './pages/BookingProcess'
 import BookingConfirm from './pages/BookingConfirm'
 import BookingSuccess from './pages/BookingSuccess'
+import Header from './components/Header'
 
 const App = () => {
   return (
     <Router>
+      <Header />
       {/* <Navbar/> */}
       <Switch>
         <Route path="/booking/steps" exact component={BookingStep} />
@@ -22,3 +24,6 @@ const App = () => {
 }
 
 export default App
+
+// google oauth client id
+// 1054065807793-5p0rkni1fj0ktvlp9l5e7ef3dp5pdon9.apps.googleusercontent.com
