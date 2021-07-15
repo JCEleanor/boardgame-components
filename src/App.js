@@ -6,13 +6,15 @@ import BookingProcess from './pages/BookingProcess'
 import BookingConfirm from './pages/BookingConfirm'
 import BookingSuccess from './pages/BookingSuccess'
 import Header from './components/Header'
+import Loginform from './components/Loginform'
 
 const App = () => {
   return (
     <Router>
-      <Header />
       {/* <Navbar/> */}
+      <Header />
       <Switch>
+        {/* <Route path="/login" exact component={Loginform} /> */}
         <Route path="/booking/steps" exact component={BookingStep} />
         <Route path="/booking" exact component={BookingProcess} />
         <Route path="/booking/confirm" exact component={BookingConfirm} />

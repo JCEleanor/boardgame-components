@@ -7,14 +7,15 @@ import boardingPassStampMobile from '../../images/boardingPassStampMobile.png'
 const BoardingPassMobile = (props) => {
   const today = new Date().toISOString().split('T')[0]
 
+  // 預設值
   const {
     date = '2021-07-28',
     numberOfPeople = 2,
     reservationId,
     startTime = 13,
     storeName = '大安店',
-    userName = '張祐如',
-    userPhone = '0919145665',
+    username = '張祐如',
+    userMail = 'anonymous@gmail.com',
   } = props
 
   return (
@@ -37,7 +38,7 @@ const BoardingPassMobile = (props) => {
           </div>
           <div className="booking-main-info-row-m">
             <div className="booking-info-title-m">訂位大名</div>
-            <div className="booking-info-content-m">{userName}</div>
+            <div className="booking-info-content-m">{username}</div>
           </div>
           <div className="booking-main-info-row-m">
             <div className="booking-info-title-m">訂單成立日</div>
@@ -45,9 +46,7 @@ const BoardingPassMobile = (props) => {
           </div>
           <div className="booking-main-info-row-m">
             <div className="booking-info-title-m">聯絡資訊</div>
-            <div className="booking-info-content-m">
-              {userPhone || '0926554778'}
-            </div>
+            <div className="booking-info-content-m">{userMail}</div>
           </div>
           <div className="booking-main-info-row-m">
             <div className="booking-info-title-m">人數</div>

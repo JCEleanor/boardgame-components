@@ -7,14 +7,15 @@ const BoardingPassPc = (props) => {
   // 這邊應該統一用同樣的dateFormatter處理
   const today = new Date().toISOString().split('T')[0]
 
+  // 預設值
   const {
     date = '2021-07-28',
     numberOfPeople = 2,
     reservationId,
     startTime = 13,
     storeName = '大安店',
-    userName = '張祐如',
-    userPhone = '0919145665',
+    username = '張祐如',
+    userMail = 'anonymous@gmail.com',
   } = props
   //const farmattedDate = date.split('T')[0]
   return (
@@ -34,7 +35,7 @@ const BoardingPassPc = (props) => {
           </div>
           <div className="booking-main-info-row">
             <div className="booking-info-title">訂位大名</div>
-            <div className="booking-info-content">{userName || '張祐如'}</div>
+            <div className="booking-info-content">{username || '張祐如'}</div>
           </div>
           <div className="booking-main-info-row">
             <div className="booking-info-title">訂單成立日</div>
@@ -43,7 +44,7 @@ const BoardingPassPc = (props) => {
           <div className="booking-main-info-row">
             <div className="booking-info-title">聯絡資訊</div>
             <div className="booking-info-content">
-              {userPhone || '0926554778'}
+              {userMail || '0926554778'}
             </div>
           </div>
           <div className="booking-main-info-row">

@@ -4,15 +4,15 @@ import BoardingPassPc from './BoardingPassPc'
 import BoardingPassMobile from './BoardingPassMobile'
 
 const BoardingPass = (props) => {
-  const { orderData } = props
+  const { orderData, userData } = props
 
   // custom hooks to monitor screen width
   const [width] = useScreen()
 
   return width > 1000 ? (
-    <BoardingPassPc {...orderData} />
+    <BoardingPassPc {...orderData} {...userData} />
   ) : (
-    <BoardingPassMobile {...orderData} />
+    <BoardingPassMobile {...orderData} {...userData} />
   )
 }
 

@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
 // todo: convert to functional component
+
 class GoogleAuth extends React.Component {
   state = { isSignedIn: null }
 
@@ -17,6 +19,7 @@ class GoogleAuth extends React.Component {
         })
         .then(() => {
           this.auth = window.gapi.auth2.getAuthInstance()
+          console.log(this.auth)
           // https://developers.google.com/identity/sign-in/web/reference#googleauthissignedinget
 
           this.setState({ isSignedIn: this.auth.isSignedIn.get() })
@@ -33,19 +36,13 @@ class GoogleAuth extends React.Component {
   // sign in
   onLogInClick = () => {
     this.auth.signIn()
-    const currentUserId = window.gapi.auth2
-      .getAuthInstance()
-      .currentUser.get()
-      .getBasicProfile()
-      .getId()
-    const currentUserMail = window.gapi.auth2
-      .getAuthInstance()
-      .currentUser.get()
+    const currentUserId = this.auth.currentUser.get().getBasicProfile().getId()
+    const currentUserMail = this.auth.currentUser
+      .get()
       .getBasicProfile()
       .getEmail()
-    const currentUseName = window.gapi.auth2
-      .getAuthInstance()
-      .currentUser.get()
+    const currentUseName = this.auth.currentUser
+      .get()
       .getBasicProfile()
       .getName()
 
@@ -75,10 +72,10 @@ class GoogleAuth extends React.Component {
       return (
         <>
           <button onClick={this.onLogInClick} className="btn btn-success">
-            log in
+            log in with Google
           </button>
           <button onClick={this.onSignUpClick} className="btn btn-primary">
-            sign up
+            sign up with Google
           </button>
         </>
       )
