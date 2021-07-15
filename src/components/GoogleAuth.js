@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { withRouter } from 'react-router-dom'
 import axios from 'axios'
 
 // todo: convert to functional component
@@ -26,6 +27,9 @@ class GoogleAuth extends React.Component {
           // this.onAuthchange()
           this.auth.isSignedIn.listen(this.onAuthChange)
         })
+        .catch((e) => {
+          console.log(e)
+        })
     })
   }
 
@@ -36,7 +40,7 @@ class GoogleAuth extends React.Component {
   // sign in
   onLogInClick = () => {
     this.auth.signIn()
-    const currentUserId = this.auth.currentUser.get().getBasicProfile().getId()
+    const currentUserId = this.auth.currentUser.get().getId()
     const currentUserMail = this.auth.currentUser
       .get()
       .getBasicProfile()
@@ -49,9 +53,34 @@ class GoogleAuth extends React.Component {
     localStorage.setItem('userId', currentUserId)
     localStorage.setItem('userMail', currentUserMail)
     localStorage.setItem('username', currentUseName)
+
+    this.props.history.goBack()
   }
   // register a user
-  onSignUpClick = () => {}
+  onSignUpClick = () => {
+    this.auth.signIn()
+    const currentUserId = this.auth.currentUser.get().getId()
+    const currentUserMail = this.auth.currentUser
+      .get()
+      .getBasicProfile()
+      .getEmail()
+    const currentUseName = this.auth.currentUser
+      .get()
+      .getBasicProfile()
+      .getName()
+    axios
+      .post('http://localhost:8080/register-google', {
+        currentUserId,
+        currentUserMail,
+        currentUseName,
+      })
+      .then((res) => {
+        console.log(res.data)
+      })
+      .catch((e) => {
+        console.log(e)
+      })
+  }
 
   // sing out
   onLogOutClick = () => {
@@ -87,4 +116,4 @@ class GoogleAuth extends React.Component {
   }
 }
 
-export default GoogleAuth
+export default withRouter(GoogleAuth)
