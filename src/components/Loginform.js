@@ -4,7 +4,6 @@ import GoogleAuth from './GoogleAuth'
 const Loginform = () => {
   return (
     <div className="container p-5">
-      <GoogleAuth />
       <form>
         <div className="form-group">
           <label htmlFor="exampleInputEmail1">Email address</label>
@@ -38,9 +37,10 @@ const Loginform = () => {
             Check me out
           </label>
         </div>
-        <button type="submit" className="btn btn-primary">
+        <GoogleAuth />
+        {/* <button type="submit" className="btn btn-primary">
           Submit
-        </button>
+        </button> */}
       </form>
     </div>
   )
